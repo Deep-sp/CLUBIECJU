@@ -1,0 +1,399 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Changa:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Changa:wght@500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+
+*,
+*::before,
+*::after {
+  box-sizing:border-box;
+}
+
+
+::-webkit-scrollbar{
+  height: 0;
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--hover-color);
+  border-radius: 5rem;
+}
+
+
+
+
+
+body {
+  background: rgb(77, 30, 66);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),#630e7d3c), url(img/background.jpg);
+  font-family: 'Merriweather', sans-serif;
+  background-size: cover;
+  background-position: center;
+    margin: 0;
+    padding: 0;
+  
+}
+
+#banner{
+  background: linear-gradient( to right,#18a79400,#630e7d00);
+  background-size: cover;
+  background-position: center;
+  height:15vh;
+
+}
+
+.logo{
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+
+}
+.h2{
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+
+}
+
+
+h1 {
+  text-align: center;
+  color: #fefefe;
+ 
+}
+
+h2 {
+  text-align: center;
+  color: #fefefe;
+  
+}
+
+h3 {
+ text-align:center;
+
+  color: #fefefe;
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+  
+}
+p{
+  
+    text-align: center;
+    color: #fefefe;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+}
+a{
+  font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+}
+form {
+  max-width: 600px;
+  height: 300px;
+  text-align: center;
+  margin: 6% auto;
+ 
+}
+
+
+input,
+textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+
+}
+
+input:focus {
+  box-shadow: 0 0px 2px rgba(var(--red), 1) !important;
+}
+
+#input-submit {
+  color: white;
+  background: linear-gradient( to right,#18a794dc,#640e7d);
+  cursor: pointer;
+
+}
+
+#input-submit:hover {
+  box-shadow: 0 1px 1px 1px rgba(157, 129, 129, 0.6);
+ 
+}
+
+
+textarea {
+  height: 126px;
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+
+.half.right {
+  width: 50%;
+}
+
+
+.half.left {
+  margin-right: 2%;
+ 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+    
+  }
+}
+
+
+.cf::before,
+.cf::after {
+  content: " ";
+  display: table;
+  
+}
+
+.cf::after {
+  clear: both;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.follow-widget {
+  text-align: center;
+  width: 90%;
+  margin: 50px auto;
+  display: table;
+  border: 1px  #ddd;
+  padding: 10px 10px 20px;
+  border-radius: 10px;
+}
+.follow-widget h2 {
+  border-bottom: 1px solid #ddd;
+  padding: 0px 0px 25px;
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 rgba(189, 21, 181, 0);
+
+}
+.follow-widget ul {
+  padding: 0;
+  margin: 0;
+  text-align: center; 
+}
+
+.follow-widget li {
+  display: inline-block;
+  list-style: none;
+  font-size: 20px;
+  margin: 20px; 
+}
+.follow-widget li a i {
+  background-color: #f1f1f1;
+  color: #fff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  line-height: 43px !important;
+}
+.follow-widget li a i:hover{
+  opacity: 0.8;
+  
+}
+
+
+
+.follow-widget li a i.fa.fa-twitter {
+  background-color: #1da1f2; 
+  
+}
+
+.follow-widget li a i.fa.fa-instagram {
+  background-color: #bc2a8d; 
+}
+
+.follow-widget li a i.fa.fa-snapchat {
+  background-color: #fffc00; 
+}
+
+.message{
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+.message .success{
+  font-size: 20px;
+  color: green;
+  position: absolute;
+  animation: buttons .3s linear;
+  display: none;
+}
+.message .danger{
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  transition: .3s;
+  animation: buttons .3s linear;
+  display: none;
+}
+@keyframes buttons{
+  0%{
+      transform: scale(0.1);
+  }
+  50%{
+      transform: scale(0.5);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+
+
+/* media querise */
+
+
+@media(max-width:1200px){
+  html{
+      font-size: 95%;
+  }
+  .nav  li{
+      margin: 0 1.2rem;
+  }
+}
+
+@media(max-width:991px){
+  header,header.sticky{
+      padding: 12px 0;
+  }
+  .navlist li .nav-item{
+      padding: 23px 0;
+  }
+  .flight-list .container{
+      margin-top: 0;
+  }
+  section{
+      padding: 50px 3%;
+  }
+  .container-foot{
+      grid-template-columns: repeat(2 , 1fr);
+      grid-gap: 2rem;
+      
+  }
+  footer ,.copyRight{
+      padding: 2rem;
+  }
+  .mission-history , .experience{
+      flex-direction: column;
+      height: 100%;
+  }
+  .img-mission{
+      width: auto;
+  }
+}
+
+@media(max-width:768px){
+  
+  #menu-icon{
+      display: block;
+      margin-left: .7rem;
+  }
+
+  .navlist{
+      position: absolute;
+      top: -1000px;
+      right: 0;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.7);
+      height: 100vh;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      transition: all .7s ease ;
+  }
+
+  .open{
+      top: 100%;
+  }
+  .navlist li{
+      padding: 1.2rem;
+      width: 100%;
+      text-align: center;
+  }
+
+  .navlist li .nav-item{
+      padding: 5px 0;
+      font-size: 1.4rem;
+  }
+  .home{
+      display: grid;
+      grid-template-columns:1fr ;
+  }
+/* ----------------------------------------------------------------------------- */
+  /* .earth-rotate img.earth{
+      animation: none;
+  } */
+/* -------------------------------------------------------------------------------- */
+
+.container-foot{
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media(max-width:503px){
+  .copyRight{
+      display: block;
+      text-align: center;
+  }
+  .Quick-menu li {
+      margin-top: .1rem;
+  }
+  
+  
+  .copyRight p {
+      margin-bottom: 1rem;
+  }
+  .container .flight-box{
+      width: 60%;
+  }
+      .earth-rotate img.earth{
+      display:  none;
+  }
+  .circle-animate{
+      width: 150px;
+      height: 150px;
+      left: 12%;
+  }
+
+}
+
