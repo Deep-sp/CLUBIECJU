@@ -1,0 +1,837 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Changa:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Changa:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --color-text: #e0e0e0;
+    --hover-color: #38DFBE;
+    --neon-box-shadow: 0 0 .5rem #38DFBE;
+    --index: calc(1vw + 1vh);
+}
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+    border-radius: 5rem;
+}
+
+body{
+    font-family: "outfit",sans-serif;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* overflow: hidden; */
+}
+
+a{
+    color: #e0e0e0;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+}
+
+p{
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--hover-color);
+}
+
+.logo img{
+    max-width: 100%;
+    width: 80px;
+    height: auto;
+}
+
+header .navlist{
+    display: flex;
+}
+
+.navlist li{
+    margin: 0 1.5rem;
+}
+
+.navlist li .nav-item{
+    position: relative;
+    padding: 17px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all .2s ease;
+}
+
+.navlist li .nav-item:hover{
+    color: var(--hover-color);
+}
+
+.navlist li .nav-item::before{
+    content: "";
+    position:absolute ;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: var(--hover-color);
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.navlist li .nav-item:hover::before{
+    width: 100%;
+}
+
+.navlist li .active{
+    color: var(--hover-color);
+    border-bottom: 1px solid var(--hover-color);
+}
+
+.right-side{
+    display: flex;
+    align-items: center;
+}
+
+.marsbtn{
+    background: linear-gradient(180deg , #70efbf 0 ,#21e69a 100%);
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    white-space: nowrap;
+    display: inline-block;
+    color: #000;
+    align-items: center;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+
+.marsbtn:hover{
+    background: linear-gradient(180deg , #12bd7b 0 ,#21e69a 100%);
+    box-shadow: 0 3px 9px #25b981;
+}
+
+#menu-icon{
+    color: var(--hover-color);
+    font-size: 2.5rem;
+    display: none;
+}
+
+section{
+    padding: 100px 12%;
+}
+
+/* home section css */
+.home-img img.hero{
+    max-width: 150%;
+    width: 850px;
+    height: auto;
+    margin-top: -13rem;
+    margin-left: -600px;
+    animation:floatImg 4s ease-in-out infinite;
+}
+
+.earth-rotate{
+    width: 100%;
+}
+
+.earth-rotate img.earth{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9rem;
+    left: -100px;
+    /*right: 500px;*/
+    z-index: -100;
+    width: calc(var(--index)*60);
+    /*animation: rotate 250s infinite linear;*/
+}
+.earthL-rotate img.earth{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -29rem;
+    left: -100px;
+    /*right: 500px;*/
+    z-index: -100;
+    width: calc(var(--index)*60);
+    /*animation: rotate 250s infinite linear;*/
+}
+
+.home{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    display: grid;  
+    align-items: center;
+    grid-template-columns: repeat(2 ,12fr);
+    color: #fff;
+    width: 100%;
+}
+
+.home-text h1,h2{
+    font-size: calc(var(--index)*2);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px #474747;
+    text-align: center;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+}
+
+.home-text .marsbtn{
+    margin-top: 1rem;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    left: 13rem;
+    
+}
+
+span{
+    color: var(--hover-color);
+}
+
+.home-img{
+    position:relative;
+}
+
+img.moon-light{
+    position: absolute;
+    left: 0;
+    mix-blend-mode: screen;
+    width: 90px;
+}
+
+
+/* -------------------flight-list css------------------- */
+
+.flight-list{
+    position: relative;
+}
+
+
+ .flight-list .container{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+   
+ }
+
+ .container .flight-box{
+    width: 300px;
+    padding: 2rem 1.5rem 2rem;
+    text-align: center;
+    background-image: url(img/cardBg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    color: #fff;
+    z-index: 2;
+    margin: 2rem .5rem;
+ }
+
+ .flight-box img{
+    width: 190px;
+    margin: -4rem auto 0 auto;
+    animation:floatImg 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 .5rem #346EFF);
+    border-radius: 50%;
+ }
+
+ .container .flight-box h2{
+    color: var(--hover-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+ }
+
+ .flight-box p{
+    color: #dddcdc;
+    line-height: 1.5rem;
+    font-size: .9rem;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+ }
+
+ .flight-box .marsbtn{
+    margin: 1rem;
+    height: 32px;
+    line-height: 32px;
+    color: #000;
+    font-size: .8rem;
+    font-weight: 800;
+    /* width: 100%; */
+    text-align: center;
+ }
+
+ /* -------------------mission history css------------------- */
+
+.mission-history{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.img-mission{
+    position: relative;
+    width: 600px;
+}
+
+.circle-animate{
+    position:absolute;
+    top: 30%;
+    width: 200px;
+    height: 200px;
+    background: var(--hover-color);
+    border-radius: 50%;
+    box-shadow: var(--neon-box-shadow);
+    text-align: right;
+}
+
+.circle-animate span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+    opacity: .4;
+    animation: circleAnimate 10s ease-out infinite ;
+    animation-delay: calc(1s *var(--i));
+}
+
+.img-mission img{
+    width: 200px;
+    height: auto;
+    animation:floatImg 4s ease-in-out infinite;
+
+}
+
+.text-mission{
+    color: #fff;
+}
+
+.text-mission h3{
+    font-size: 2.5rem;
+    text-shadow: 2px 1px 1px #474747;
+}
+
+.text-mission p{
+    margin: 1rem auto;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.text-mission .mission-btn{
+    margin-top: 1rem;
+    height: 35px;
+    line-height: 35px;
+    align-items: center;
+}
+
+
+ /* -------------------shope section css------------------- */
+
+.shop .flight-box{
+    text-align: left;
+    width: 210px;
+    text-align: center;
+
+}
+.shop .flight-box{
+    animation: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+    filter:none;
+}
+
+.shop .flight-box .title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.shop .flight-box .prise{
+    color: var(--hover-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+
+
+}
+
+.shop-btn{
+    text-align: center;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.shop-btn .marsbtn{
+    height: 40px;
+    line-height: 40px;
+}
+
+
+ /* -------------------experience section css------------------- */
+
+
+.experience .img-mission img{
+    width: 300px;
+}
+
+.experience .circle-animate{
+    position: absolute;
+    left: 27%;
+    width: 150px;
+    height: 150px;
+}
+
+
+ /* -------------------Footer section css------------------- */
+
+footer{
+    width: 100%;
+    height: 390px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3rem 12% ;
+    color: #fff;
+    border-top: 1px solid #561389;
+}
+
+
+.container-foot{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.container-foot .rightBox .social-media{
+    display: flex;
+
+}
+
+.container-foot .title{
+    font-size: 1.5rem;
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+.leftBox p{
+    padding: 25px 0;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.social-media{
+    font-size: 1.5rem;
+}
+
+.social-media a:hover{
+    color: var(--hover-color);
+}
+
+.social-media li{
+   margin-right: 1rem;
+   margin-top:2rem ; 
+}
+
+.Quick-menu li{
+    margin-top: 1rem;
+}
+
+.Quick-menu li a:hover{
+    color: var(--hover-color);
+}
+
+.info li{
+    display: flex ;
+    margin:  1.5rem 1rem 1rem 0;
+    column-gap: 5px;
+}
+
+
+
+
+.copyRight{
+    padding: 1.5rem 12%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(117,117,117,0.3);
+    align-items: center;
+}
+.copyRight a{
+    display: inline-flex;
+    align-items: center;
+    background: var(--hover-color);
+    border-radius: 50%;
+    padding: 10px;
+    color: #000;
+}
+
+ /* -------------------sticky header css------------------- */
+
+header.sticky{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 9px 12%;
+    border-bottom: 1px solid #3e0e62;
+}
+
+
+/* scroll animation */
+
+.scroll-left{
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.scroll-right{
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.scroll-top{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.scroll-bottom{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+.scroll-scale{
+    opacity: 0;
+    transform: scale(.8);
+}
+
+.show-items{
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+    transition: all 2s;
+}
+
+
+/* log in page */
+.form-box{
+    width: 380px;
+    height: 450px;
+    position: relative;
+    margin: 6% auto;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+   
+}
+
+
+.button-box{
+width: 220px;
+margin:  35px auto;
+position: relative;
+box-shadow: 0 0 20px 9px rgba(18, 73, 90, 0.463);
+border-radius: 30px;
+color: #fff;
+}
+.toggole-btn{
+padding: 10px 30px;
+cursor: pointer;
+background: transparent;
+border: 0;
+outline: none;
+position: relative;
+color: #0e0e0e;
+color: #fff;
+}
+#btn{
+top: 0;
+left: 0;
+position: absolute;
+width: 110px;
+height: 100%;
+background: linear-gradient( to right,#18a793,#640e7d);
+border-radius: 30px;
+transition: .5s;
+}
+
+
+.input-group{
+top: 180px;
+position: absolute;
+width: 280px;
+transition: 0.5s;
+color: #101010;
+color: #fff;
+}
+.input-group span{
+    color: #000;
+}
+
+
+.input-field{
+width: 100%;
+padding: 10px 0;
+margin: 5px 0;
+border-left: 0;
+border-top: 0;
+border-right: 0;
+border-bottom: 1px solid #999;
+outline: none;
+background: transparent;
+color: #080808;
+color: #fff;
+}
+.submit-btn{
+width: 85%;
+padding: 10px 30px;
+cursor: pointer;
+display:block;
+margin: auto;
+background: linear-gradient( to right,#18a7a7,#640e7d);
+border: 0;
+outline: none;
+border-radius: 30px;
+color: #f3f2f2;
+}
+.check-box{
+margin: 30px 10px 30px 0;
+
+}
+.span{
+color: #777;
+font-size: 12px;
+bottom: 68px;
+position: absolute;
+}
+#login{
+/* margin: 0 50px 0 0; */
+left: 50px;
+
+}
+#register{
+left: 450px;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+
+
+
+
+
+
+
+
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes floatImg{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-14px);
+    }
+    100%{
+        transform: translateY(0); ;
+    }
+}
+
+
+
+@keyframes circleAnimate{
+    100%{
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+
+/* media querise */
+
+
+@media(max-width:1200px){
+    html{
+        font-size: 95%;
+    }
+    .nav  li{
+        margin: 0 1.2rem;
+    }
+}
+
+@media(max-width:991px){
+    header,header.sticky{
+        padding: 12px 0;
+    }
+    .navlist li .nav-item{
+        padding: 23px 0;
+    }
+    .flight-list .container{
+        margin-top: 0;
+    }
+    section{
+        padding: 50px 3%;
+    }
+    .container-foot{
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap: 2rem;
+        
+    }
+    footer ,.copyRight{
+        padding: 2rem;
+    }
+    .mission-history , .experience{
+        flex-direction: column;
+        height: 100%;
+    }
+    .img-mission{
+        width: auto;
+    }
+}
+
+@media(max-width:768px){
+    
+    #menu-icon{
+        display: block;
+        margin-left: .7rem;
+    }
+
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.7);
+        height: 100vh;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        transition: all .7s ease ;
+    }
+
+    .open{
+        top: 100%;
+    }
+    .navlist li{
+        padding: 1.2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navlist li .nav-item{
+        padding: 5px 0;
+        font-size: 1.4rem;
+    }
+    .home{
+        display: grid;
+        grid-template-columns:1fr ;
+    }
+/* ----------------------------------------------------------------------------- */
+    /* .earth-rotate img.earth{
+        animation: none;
+    } */
+/* -------------------------------------------------------------------------------- */
+
+.container-foot{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width:503px){
+    .copyRight{
+        display: block;
+        text-align: center;
+    }
+    .Quick-menu li {
+        margin-top: .1rem;
+    }
+    
+    
+    .copyRight p {
+        margin-bottom: 1rem;
+    }
+    .container .flight-box{
+        width: 60%;
+    }
+        .earth-rotate img.earth{
+        display:  none;
+    }
+    .circle-animate{
+        width: 150px;
+        height: 150px;
+        left: 12%;
+    }
+
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+
+
+
+
